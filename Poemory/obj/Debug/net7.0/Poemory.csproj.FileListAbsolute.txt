@@ -1,0 +1,15 @@
+C:\Users\alain\source\repos\Poemory\Poemory\bin\Debug\net7.0\Poemory.exe
+C:\Users\alain\source\repos\Poemory\Poemory\bin\Debug\net7.0\Poemory.deps.json
+C:\Users\alain\source\repos\Poemory\Poemory\bin\Debug\net7.0\Poemory.runtimeconfig.json
+C:\Users\alain\source\repos\Poemory\Poemory\bin\Debug\net7.0\Poemory.dll
+C:\Users\alain\source\repos\Poemory\Poemory\bin\Debug\net7.0\Poemory.pdb
+C:\Users\alain\source\repos\Poemory\Poemory\obj\Debug\net7.0\Poemory.csproj.AssemblyReference.cache
+C:\Users\alain\source\repos\Poemory\Poemory\obj\Debug\net7.0\Poemory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alain\source\repos\Poemory\Poemory\obj\Debug\net7.0\Poemory.AssemblyInfoInputs.cache
+C:\Users\alain\source\repos\Poemory\Poemory\obj\Debug\net7.0\Poemory.AssemblyInfo.cs
+C:\Users\alain\source\repos\Poemory\Poemory\obj\Debug\net7.0\Poemory.csproj.CoreCompileInputs.cache
+C:\Users\alain\source\repos\Poemory\Poemory\obj\Debug\net7.0\Poemory.dll
+C:\Users\alain\source\repos\Poemory\Poemory\obj\Debug\net7.0\refint\Poemory.dll
+C:\Users\alain\source\repos\Poemory\Poemory\obj\Debug\net7.0\Poemory.pdb
+C:\Users\alain\source\repos\Poemory\Poemory\obj\Debug\net7.0\Poemory.genruntimeconfig.cache
+C:\Users\alain\source\repos\Poemory\Poemory\obj\Debug\net7.0\ref\Poemory.dll

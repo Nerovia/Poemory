@@ -5,6 +5,9 @@ using System.Text;
 using System.Xml.Linq;
 using System.Drawing;
 using System.Diagnostics;
+using System.Globalization;
+using System.Threading;
+using Poemory;
 
 while (true)
 	RunSession(GetPoem());
@@ -13,7 +16,7 @@ Poem GetPoem()
 {
 	while (true)
 	{
-		Console.Write("present me thine file: ");
+		Console.Write(Strings.FileQuery);
 		var s = Console.ReadLine();
 		if (s == null)
 			continue;
@@ -21,13 +24,13 @@ Poem GetPoem()
 
 		if (!Path.IsPathFullyQualified(path))
 		{
-			Console.Error.WriteLine("ye path is not pure");
+			Console.Error.WriteLine(Strings.FilePathError);
 			continue;
 		}
 
 		if (!Path.Exists(path))
 		{
-			Console.Error.WriteLine("thine file dost not exist");
+			Console.Error.WriteLine(Strings.FileExistError);
 			continue;
 		}
 
@@ -67,10 +70,12 @@ static void RunSession(Poem poem)
 		Console.WriteLine();
 	}
 
+	var score = (double)correct / n;
+
 	Console.WriteLine();
-	Console.Write("Ye have mastered ");
-	ColorWrite(correct.ToString(), ConsoleColor.Green);
-	Console.WriteLine($" / {n}, that be {correct * 100 / n}%");
+	Console.WriteLine(Strings.Score, correct, n, score * 100.0);
+	Console.WriteLine();
+	ColorWrite(GetFeedback(score), ConsoleColor.Magenta);
 	Console.WriteLine();
 	Console.WriteLine();
 }
@@ -116,6 +121,19 @@ static bool GetAnswer(int x, int y, string answer)
 	Console.SetCursorPosition(left, top);
 	
 	return correct;
+}
+
+static string GetFeedback(double score)
+{
+	return score switch
+	{
+		>= 1.0 => Strings.FeedbackExcellent,
+		> 0.7 => Strings.FeedbackGood,
+		> 0.5 => Strings.FeedbackMediocre,
+		> 0.3 => Strings.FeedbackBad,
+		>= 0.0 => Strings.FeedbackTerrible,
+		_ => throw new ArgumentException()
+	};
 }
 
 class Poem
